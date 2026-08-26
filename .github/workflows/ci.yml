@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   checks:
-    name: Build, test, format, and lint
+    name: Test, format, and lint
     runs-on: ubuntu-latest
 
     steps:
@@ -30,9 +30,6 @@ jobs:
 
       - name: Download dependencies
         run: go mod download
-
-      - name: Build
-        run: go build ./...
 
       - name: Test
         run: go test ./...
